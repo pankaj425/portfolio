@@ -1,170 +1,1015 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pankaj Maddheshiya | Portfolio</title>
+<title>Pankaj Maddheshiya | Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Pankaj Maddheshiya, an aspiring software developer building full-stack applications with Java, Python, React and SQL. Explore projects, internships and certifications." />
+<meta name="author" content="Pankaj Maddheshiya" />
+<meta name="keywords" content="Pankaj Maddheshiya, software developer, Java, Python, React, FastAPI, portfolio, Galgotias University" />
+<meta name="theme-color" content="#070a0f" id="themeColor" />
+<link rel="canonical" href="https://pankaj425.github.io/portfolio/" />
 
-<!-- Font and Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pankaj425.github.io/portfolio/" />
+<meta property="og:title" content="Pankaj Maddheshiya | Aspiring Software Developer" />
+<meta property="og:description" content="Aspiring software developer building practical full-stack applications with Java, Python, React and SQL." />
+<meta property="og:image" content="https://pankaj425.github.io/portfolio/assets/og-image.jpg" />
+<meta property="og:image:alt" content="Pankaj Maddheshiya, aspiring software developer" />
+<meta property="og:site_name" content="Pankaj Maddheshiya Portfolio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pankaj Maddheshiya | Aspiring Software Developer" />
+<meta name="twitter:description" content="Aspiring software developer building practical full-stack applications with Java, Python, React and SQL." />
+<meta name="twitter:image" content="https://pankaj425.github.io/portfolio/assets/og-image.jpg" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="app.css">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    } catch (error) {}
+  })();
+</script>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="app.css" />
+<noscript>
+  <style>
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+    .theme-toggle,
+    .nav-toggle,
+    [data-copy] { display: none !important; }
+    .scroll-progress { display: none !important; }
+    @media (max-width: 980px) {
+      .site-header {
+        position: static;
+        height: auto;
+        padding: 12px 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-shell { flex-wrap: wrap; }
+      .primary-nav {
+        position: static;
+        display: block;
+        flex: 1 0 100%;
+        width: 100%;
+        max-height: none;
+        padding: 8px 0 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2px 4px;
+      }
+      .nav-list a { padding: 6px 8px; font-size: 0.8rem; }
+      .hero { padding-top: 40px; }
+    }
+  </style>
+</noscript>
 </head>
 
 <body>
-<!-- ===== NAVBAR ===== -->
-<nav>
-<div class="container nav-container">
-    <a href="#" class="logo">
-    <h2>Pankaj<span> Maddheshiya</span></h2>
-    </a>
-    <ul class="nav-links">
-    <li><a href="#About">About</a></li>
-    <li><a href="#Services">Services</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#Blog">Blog</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    </ul>
-</div>
-</nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-grid" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
 
-<!-- ===== HEADER ===== -->
-<header>
-<div class="header-container container">
-    <div class="header-left">
-    <h1>Hello, I'm <span>Pankaj</span></h1>
-    <p class="intro">
-        Proficient in <b>HTML, CSS, JavaScript, and React.js</b> with hands-on experience in both Windows and Linux environments.
-        Passionate about delivering high-quality solutions that drive organizational growth.
-    </p>
-    <h5 class="title">Frontend Developer</h5>
-    <div class="header-actions">
-        <a href="cv.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
-        <a href="#About" class="btn">Read More</a>
+<header class="site-header" id="siteHeader">
+  <div class="container nav-shell">
+    <a href="#home" class="brand" aria-label="Pankaj Maddheshiya, home">
+      <span class="brand-mark" aria-hidden="true">PM</span>
+      <span class="brand-text">Pankaj <span>Maddheshiya</span></span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Internships</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="icon-btn theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch theme">
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+      </button>
+      <a class="btn btn-sm btn-outline nav-resume" href="assets/Pankaj_Maddheshiya_Resume.pdf" download>
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+        <span>Resume</span>
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    </div>
-    <div class="header-right">
-    <img src="photo.jpg" alt="Pankaj Profile">
-    </div>
-</div>
+  </div>
 </header>
 
-<!-- ===== ABOUT ===== -->
-<section id="About">
-<h1><span>A</span>bout Me</h1>
-<div class="container about-container">
-    <p>
-    I'm a passionate <span>Frontend Developer</span> who loves building modern, responsive, and user-friendly
-    interfaces. Constantly learning new technologies, I aim to stay ahead in <span>web development</span> and
-    deliver visually appealing, performant applications.
-    </p>
-</div>
+<main id="main">
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy-wrap">
+        <p class="status-pill" data-reveal>
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to software development opportunities
+        </p>
 
-<div class="about-grid">
-    <article>
-    <img src="man.png" alt="">
-    <h5>Full Name</h5>
-    <p>Pankaj Maddheshiya</p>
-    </article>
-    <article>
-    <img src="email.png" alt="">
-    <h5>Email</h5>
-    <p><a href="mailto:maddheshiyap181@gmail.com">maddheshiyap181@gmail.com</a></p>
-    </article>
-    <article>
-    <img src="linkedin.png" alt="">
-    <h5>LinkedIn</h5>
-    <p><a href="https://www.linkedin.com/in/pankaj-maddheshiya/" target="_blank">View Profile</a></p>
-    </article>
-    <article>
-    <img src="telephone-call.png" alt="">
-    <h5>Phone</h5>
-    <p>+91 8176037328</p>
-    </article>
-</div>
-</section>
+        <h1 data-reveal>Pankaj <span class="gradient-text">Maddheshiya</span></h1>
 
-<!-- ===== SERVICES ===== -->
-<section id="Services">
-<h1><span>W</span>hat I Do</h1>
-<div class="container services-container">
-    <article>
-    <img src="software.png" alt="">
-    <h2>Software Development</h2>
-    <p>Designing, coding, testing, and maintaining applications tailored to client needs, delivering high-quality software solutions.</p>
-    </article>
-    <article>
-    <img src="coding.png" alt="">
-    <h2>Web Development</h2>
-    <p>Creating modern, responsive websites focused on performance, user experience, and clean design using the latest web technologies.</p>
-    </article>
-    <article>
-    <img src="python.png" alt="">
-    <h2>Python Programming</h2>
-    <p>Leveraging Python for web development, automation, and data analysis, integrating powerful backend logic with frontend solutions.</p>
-    </article>
-</div>
-</section>
+        <p class="hero-headline" data-reveal>
+          Aspiring Software Developer
+          <span class="headline-sep" aria-hidden="true">|</span> Java
+          <span class="headline-sep" aria-hidden="true">|</span> Python
+          <span class="headline-sep" aria-hidden="true">|</span> React
+        </p>
 
-<!-- ===== SKILLS ===== -->
-<section id="skills">
-<h1><span>M</span>y Skills</h1>
-<div class="container skills-container">
-    <div class="skill"><i class="fa-brands fa-html5"></i> HTML</div>
-    <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-    <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
-    <div class="skill"><i class="fa-solid fa-database"></i> MySQL</div>
-    <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
-    <div class="skill"><i class="fa-solid fa-pen-nib"></i> Web Design</div>
-    <div class="skill"><i class="fa-solid fa-vial"></i> Testing</div>
-    <div class="skill"><i class="fa-solid fa-robot"></i> Prompt Engineering</div>
-</div>
-</section>
+        <p class="hero-intro" data-reveal>
+          I'm an aspiring Software Developer passionate about building practical applications,
+          solving complex problems, and creating efficient, user-friendly software solutions.
+          I enjoy learning new technologies and turning ideas into working products.
+        </p>
 
-<!-- ===== BLOG ===== -->
-<section id="Blog">
-<h1><span>B</span>log</h1>
-<p class="blog-intro">Explore insights and trends from the world of front-end development, design, and technology innovation.</p>
-<div class="container blog-container">
-    <article class="card">
-    <img src="web design (1).jpg" alt="">
-    <p>Web design is the art of crafting beautiful and intuitive user experiences using HTML, CSS, and JavaScript — ensuring smooth, responsive interfaces.</p>
-    </article>
-    <article class="card">
-    <img src="web design (2).jpg" alt="">
-    <p>Responsive design ensures accessibility across devices. Frameworks like Bootstrap and principles of UX design make the web more inclusive and engaging.</p>
-    </article>
-</div>
-</section>
+        <div class="hero-actions" data-reveal>
+          <a href="#projects" class="btn btn-primary">
+            View My Projects
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="assets/Pankaj_Maddheshiya_Resume.pdf" class="btn btn-outline" download>
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            Download Resume
+          </a>
+          <a href="#contact" class="link-arrow">
+            Contact Me
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
 
-<!-- ===== CONTACT ===== -->
-<section id="Contact">
-<h1><span>Get</span> In Touch</h1>
-<div class="container contact-container">
-    <form>
-    <div class="form-top">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Phone Number" required>
+        <div class="hero-socials" data-reveal aria-label="Social links">
+          <a href="https://github.com/pankaj425" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pankaj-maddheshiya/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:maddheshiyap181@gmail.com" aria-label="Send an email">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+918176037328" aria-label="Call Pankaj">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="hero-facts" data-reveal>
+          <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> B.Tech CSE &middot; Galgotias University</li>
+          <li><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> CGPA 8.01 / 10</li>
+          <li><i class="fa-solid fa-briefcase" aria-hidden="true"></i> 2 internships &middot; 3 certifications</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="portrait-card">
+          <div class="portrait-media">
+            <img src="assets/profile.jpg" alt="Pankaj Maddheshiya" width="800" height="1018" fetchpriority="high" />
+          </div>
+
+          <span class="portrait-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to opportunities
+          </span>
+
+          <span class="float-tag float-tag-java"><i class="fa-brands fa-java" aria-hidden="true"></i> Java</span>
+          <span class="float-tag float-tag-python"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+          <span class="float-tag float-tag-react"><i class="fa-brands fa-react" aria-hidden="true"></i> React</span>
+
+          <div class="portrait-caption">
+            <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+            <span>Smart India Hackathon 2025 &middot; Phase 2</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-bottom">
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit</button>
-    </div>
-    </form>
-</div>
-</section>
 
-<footer>
-<p>© 2025 <span>Pankaj Maddheshiya</span> | Designed with ❤️ by pankaj maddheshiya</p>
+    <div class="container">
+      <div class="tech-strip" data-reveal>
+        <span class="tech-strip-label">Core stack</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>SQL</span>
+        <span>FastAPI</span>
+        <span>Node.js</span>
+        <span>Git</span>
+        <span>PostgreSQL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">01 &mdash; About</span>
+        <h2>Practical software, <span class="gradient-text">built with care</span></h2>
+        <p class="section-sub">A quick introduction to how I work and what I'm building.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy" data-reveal>
+          <p class="about-lead">
+            I'm a Computer Science and Engineering student at Galgotias University with a strong
+            interest in backend engineering, full-stack development and applied AI.
+          </p>
+          <p>
+            Through internships with EduSkills and CodeSoft, I've worked on AI/ML fundamentals,
+            responsive web applications and full-stack features. I enjoy taking an idea from a
+            rough data model to a working product &mdash; designing the API, shaping the interface
+            and making sure the result is reliable and easy to use.
+          </p>
+          <p>
+            I learn best by building. Recent projects include RecoveryAI, an ML-powered revenue
+            recovery platform, and OrderFlow-AI, a conversational analytics interface for SAP
+            order-to-cash data. I'm now looking for an internship or entry-level role where I can
+            contribute to real products and keep learning from experienced engineers.
+          </p>
+
+          <div class="tag-list about-tags">
+            <span class="tag">Backend development</span>
+            <span class="tag">Full-stack applications</span>
+            <span class="tag">Applied ML</span>
+            <span class="tag">REST APIs</span>
+          </div>
+
+          <div class="about-actions">
+            <a class="btn btn-primary" href="assets/Pankaj_Maddheshiya_Resume.pdf" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+            <a class="btn btn-outline" href="#contact">Let's talk</a>
+          </div>
+        </div>
+
+        <aside class="info-panel" data-reveal>
+          <h3>Quick facts</h3>
+          <dl class="fact-list">
+            <div class="fact-row">
+              <dt>Degree</dt>
+              <dd>B.Tech CSE</dd>
+            </div>
+            <div class="fact-row">
+              <dt>University</dt>
+              <dd>Galgotias University</dd>
+            </div>
+            <div class="fact-row">
+              <dt>CGPA</dt>
+              <dd>8.01 / 10</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Focus</dt>
+              <dd>Backend &middot; Full-stack &middot; Applied ML</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Hackathon</dt>
+              <dd>Smart India Hackathon 2025</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Availability</dt>
+              <dd>Internships &amp; entry-level roles</dd>
+            </div>
+          </dl>
+
+          <div class="focus-card">
+            <span class="focus-label">Currently building</span>
+            <h4>RecoveryAI &amp; OrderFlow-AI</h4>
+            <p>Two projects exploring recovery analytics, conversational interfaces and applied AI.</p>
+            <div class="focus-links">
+              <a href="https://github.com/pankaj425/recovery-ai" target="_blank" rel="noopener noreferrer">
+                RecoveryAI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/pankaj425/OrderFlow-AI" target="_blank" rel="noopener noreferrer">
+                OrderFlow-AI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">02 &mdash; Skills</span>
+        <h2>The tools I use to <span class="gradient-text">ship</span></h2>
+        <p class="section-sub">A practical toolkit built through coursework, internships and personal projects.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+          <h3>Languages</h3>
+          <p>Core languages I use for problem solving and application development.</p>
+          <div class="tag-list">
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+          </div>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
+          <h3>Frontend</h3>
+          <p>Responsive interfaces with semantic markup and component-based UI.</p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React.js</span>
+          </div>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+          <h3>Backend</h3>
+          <p>APIs, authentication and server-side application logic.</p>
+          <div class="tag-list">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">FastAPI</span>
+          </div>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+          <h3>Databases</h3>
+          <p>Schema design, SQL queries and data modelling.</p>
+          <div class="tag-list">
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+          <h3>Developer tools</h3>
+          <p>A practical workflow for version control, testing and delivery.</p>
+          <div class="tag-list">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">IntelliJ IDEA</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Maven</span>
+          </div>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+          <h3>CS fundamentals</h3>
+          <p>The foundations behind the code I write.</p>
+          <div class="tag-list">
+            <span class="tag">DSA</span>
+            <span class="tag">OOP</span>
+            <span class="tag">DBMS</span>
+            <span class="tag">Operating Systems</span>
+            <span class="tag">Computer Networks</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="section-note" data-reveal>
+        Most comfortable with Python, Java, JavaScript and SQL &mdash; and always deepening my
+        backend and system-design skills.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">03 &mdash; Projects</span>
+        <h2>Selected <span class="gradient-text">work</span></h2>
+        <p class="section-sub">Real applications with real constraints &mdash; from payment recovery to real-time messaging.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-reveal>
+          <div class="project-visual project-visual-1" aria-hidden="true">
+            <span class="project-number">01</span>
+            <i class="fa-solid fa-chart-pie"></i>
+            <span class="project-type">AI / ML</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="badge badge-featured"><i class="fa-solid fa-star" aria-hidden="true"></i> Featured</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>RecoveryAI</h3>
+            <p class="project-subtitle">Revenue Recovery Intelligence Platform</p>
+            <p>
+              A platform that ingests failed-payment events, classifies the root cause, predicts
+              recovery probability and ranks cases by expected value.
+            </p>
+            <ul class="project-points">
+              <li>FastAPI + SQLAlchemy backend with JWT auth and idempotent webhook ingestion.</li>
+              <li>Interpretable ML scoring with an approval-gated recovery workflow.</li>
+              <li>React dashboard with analytics, action queue and a tool-calling AI assistant.</li>
+            </ul>
+            <div class="tag-list project-stack">
+              <span class="tag">React</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">SQLAlchemy</span>
+              <span class="tag">ML</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/pankaj425/recovery-ai" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-visual project-visual-2" aria-hidden="true">
+            <span class="project-number">02</span>
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="project-type">Full stack</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Live demo</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>OrderFlow-AI</h3>
+            <p class="project-subtitle">Order-to-Cash Analytics Platform</p>
+            <p>
+              A conversational analytics workspace for SAP order-to-cash data, with a 3D document
+              graph and visible SQL behind every answer.
+            </p>
+            <ul class="project-points">
+              <li>Natural-language questions with data-backed answers and SQL transparency.</li>
+              <li>3D document-chain graph that highlights and focuses queried nodes.</li>
+              <li>FastAPI and SQLite backend with a React and Three.js frontend.</li>
+            </ul>
+            <div class="tag-list project-stack">
+              <span class="tag">React</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Groq</span>
+              <span class="tag">Three.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://ordertocash-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo
+              </a>
+              <a href="https://github.com/pankaj425/OrderFlow-AI" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-visual project-visual-3" aria-hidden="true">
+            <span class="project-number">03</span>
+            <i class="fa-solid fa-comments"></i>
+            <span class="project-type">Real time</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Live demo</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>Real-Time Chat</h3>
+            <p class="project-subtitle">MERN messaging application</p>
+            <p>
+              A full-stack chat application with instant messaging, presence, secure authentication
+              and media sharing.
+            </p>
+            <ul class="project-points">
+              <li>JWT authentication and real-time one-to-one messaging with Socket.IO.</li>
+              <li>Online/offline presence and Cloudinary-backed image sharing.</li>
+              <li>Responsive React interface with a Node.js and MongoDB backend.</li>
+            </ul>
+            <div class="tag-list project-stack">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Socket.IO</span>
+            </div>
+            <div class="project-links">
+              <a href="https://realtime-chat-app-eta-azure.vercel.app" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo
+              </a>
+              <a href="https://github.com/pankaj425/realtimeChatApp" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-visual project-visual-4" aria-hidden="true">
+            <span class="project-number">04</span>
+            <i class="fa-solid fa-car"></i>
+            <span class="project-type">Academic</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="badge">Course project</span>
+              <span class="project-year">Java</span>
+            </div>
+            <h3>Car Rental System</h3>
+            <p class="project-subtitle">Vehicle rental management</p>
+            <p>
+              A Java-based car rental application with a MySQL database and JDBC data access,
+              paired with an HTML/CSS interface.
+            </p>
+            <ul class="project-points">
+              <li>Object-oriented Java application with relational data access.</li>
+              <li>MySQL schema managed through JDBC.</li>
+              <li>Academic project; source and walkthrough available on request.</li>
+            </ul>
+            <div class="tag-list project-stack">
+              <span class="tag">Java</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JDBC</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="mailto:maddheshiyap181@gmail.com?subject=Car%20Rental%20System%20project">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i> Request details
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-work" data-reveal>
+        <div class="more-work-head">
+          <div>
+            <span class="eyebrow">More work</span>
+            <h3>Also on GitHub</h3>
+          </div>
+          <a href="https://github.com/pankaj425?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-arrow">
+            All repositories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="more-work-grid">
+          <a class="more-work-item" href="https://github.com/pankaj425/LocalAIAgentWithRAG" target="_blank" rel="noopener noreferrer">
+            <span><b>Local AI Agent with RAG</b><small>Python &middot; RAG</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <a class="more-work-item" href="https://github.com/pankaj425/newtonite-ops-23131011463" target="_blank" rel="noopener noreferrer">
+            <span><b>Newtonite Ops</b><small>React &middot; FastAPI &middot; PostgreSQL</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <a class="more-work-item" href="https://github.com/pankaj425/Email_Spam_Detector" target="_blank" rel="noopener noreferrer">
+            <span><b>Email Spam Detector</b><small>Python &middot; Flask &middot; Scikit-learn</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">04 &mdash; Internships</span>
+        <h2>Experience beyond <span class="gradient-text">the classroom</span></h2>
+        <p class="section-sub">Internships that shaped how I approach AI/ML and full-stack development.</p>
+      </div>
+
+      <div class="intern-grid">
+        <article class="intern-card" data-reveal>
+          <div class="intern-top">
+            <span class="card-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+            <span class="badge">Virtual internship</span>
+          </div>
+          <h3>Google AI-ML Virtual Internship</h3>
+          <p class="intern-org">EduSkills</p>
+          <p>
+            Completed a virtual internship covering AI/ML fundamentals, practical problem-solving
+            and real-world applications.
+          </p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Covered AI/ML fundamentals and applied problem-solving.</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Practised applying AI/ML concepts to real-world problems.</li>
+          </ul>
+        </article>
+
+        <article class="intern-card" data-reveal>
+          <div class="intern-top">
+            <span class="card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+            <span class="badge">Internship</span>
+          </div>
+          <h3>Full Stack Development Internship</h3>
+          <p class="intern-org">CodeSoft</p>
+          <p>
+            Developed responsive web applications and gained hands-on experience across frontend
+            and backend development.
+          </p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Built and improved web application features.</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Worked with frontend and backend technologies.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">05 &mdash; Education</span>
+        <h2>Academic <span class="gradient-text">background</span></h2>
+        <p class="section-sub">A consistent record across school and university.</p>
+      </div>
+
+      <div class="education-layout">
+        <div class="timeline" data-reveal>
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <span class="badge">Pursuing</span>
+              <span class="timeline-score">CGPA 8.01 / 10</span>
+            </div>
+            <h3>B.Tech in Computer Science &amp; Engineering</h3>
+            <p class="timeline-school">Galgotias University &middot; Greater Noida</p>
+            <p>Focus areas include data structures, algorithms, DBMS, operating systems, computer networks and OOP.</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <span class="timeline-year">2023</span>
+              <span class="timeline-score">82%</span>
+            </div>
+            <h3>Class XII &mdash; UP Board</h3>
+            <p class="timeline-school">Sachidanand Inter College &middot; Kaptanganj, Kushinagar</p>
+            <p>Senior secondary education.</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <span class="timeline-year">2021</span>
+              <span class="timeline-score">87.5%</span>
+            </div>
+            <h3>Class X &mdash; UP Board</h3>
+            <p class="timeline-school">Sachidanand Inter College &middot; Kaptanganj, Kushinagar</p>
+            <p>Secondary education.</p>
+          </article>
+        </div>
+
+        <aside class="achievement-card" data-reveal>
+          <span class="card-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></span>
+          <span class="eyebrow">Achievement</span>
+          <h3>Smart India Hackathon 2025</h3>
+          <p class="achievement-meta">Phase 2 participant</p>
+          <p>
+            Participated in Phase 2, showcasing teamwork, problem-solving and innovation while
+            working on a solution under time constraints.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Teamwork</span>
+            <span class="tag">Problem solving</span>
+            <span class="tag">Innovation</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">06 &mdash; Certifications</span>
+        <h2>Verified <span class="gradient-text">learning</span></h2>
+        <p class="section-sub">Certifications and courses that support my core development work.</p>
+      </div>
+
+      <div class="cert-grid">
+        <article class="cert-card" data-reveal>
+          <div class="cert-top">
+            <span class="card-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+            <span class="cert-year">Jan 2024</span>
+          </div>
+          <h3>Python Certification</h3>
+          <p class="cert-issuer">GUVI &middot; in collaboration with HCL</p>
+          <p>Python programming fundamentals and practical problem-solving.</p>
+        </article>
+
+        <article class="cert-card" data-reveal>
+          <div class="cert-top">
+            <span class="card-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+            <span class="cert-year">2025</span>
+          </div>
+          <h3>Oracle Generative AI Professional</h3>
+          <p class="cert-issuer">Oracle</p>
+          <p>Generative AI concepts and professional application.</p>
+        </article>
+
+        <article class="cert-card" data-reveal>
+          <div class="cert-top">
+            <span class="card-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
+            <span class="cert-year">Mar 2026</span>
+          </div>
+          <h3>Software Engineering</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p>Software engineering principles, process and design.</p>
+        </article>
+      </div>
+
+      <p class="section-note" data-reveal>
+        Credential details can be shared on request &mdash;
+        <a href="mailto:maddheshiyap181@gmail.com?subject=Certification%20details">get in touch</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="profiles">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">07 &mdash; Profiles</span>
+        <h2>Find me <span class="gradient-text">online</span></h2>
+        <p class="section-sub">Code, projects and professional updates in one place.</p>
+      </div>
+
+      <div class="profiles-layout">
+        <aside class="profile-card" data-reveal>
+          <div class="profile-id">
+            <img src="assets/profile.jpg" alt="" width="56" height="56" />
+            <div>
+              <h3>Pankaj Maddheshiya</h3>
+              <p>Aspiring Software Developer</p>
+            </div>
+          </div>
+
+          <div class="profile-links">
+            <a href="https://github.com/pankaj425" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+              <span><b>GitHub</b><small>@pankaj425</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pankaj-maddheshiya/" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+              <span><b>LinkedIn</b><small>pankaj-maddheshiya</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:maddheshiyap181@gmail.com">
+              <span class="profile-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+              <span><b>Email</b><small>maddheshiyap181@gmail.com</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/pankaj425/leetcode" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+              <span><b>LeetCode practice</b><small>Solutions archive on GitHub</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <p class="profile-availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to internships &amp; entry-level roles
+          </p>
+        </aside>
+
+        <div class="github-panel" data-reveal>
+          <div class="github-head">
+            <div>
+              <span class="eyebrow">GitHub activity</span>
+              <h3>Recently updated repositories</h3>
+            </div>
+            <a href="https://github.com/pankaj425" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              View profile <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <p class="repo-status" id="repoStatus" aria-live="polite">Featured repositories</p>
+
+          <div class="repo-list" id="githubRepos">
+            <a class="repo-item" href="https://github.com/pankaj425/recovery-ai" target="_blank" rel="noopener noreferrer">
+              <span class="repo-top">
+                <span class="repo-name">recovery-ai</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </span>
+              <span class="repo-desc">AI-powered revenue recovery platform that identifies high-value recovery opportunities.</span>
+              <span class="repo-meta">Featured project</span>
+            </a>
+            <a class="repo-item" href="https://github.com/pankaj425/OrderFlow-AI" target="_blank" rel="noopener noreferrer">
+              <span class="repo-top">
+                <span class="repo-name">OrderFlow-AI</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </span>
+              <span class="repo-desc">Order-to-cash analytics with a conversational interface and 3D document graph.</span>
+              <span class="repo-meta">Featured project</span>
+            </a>
+            <a class="repo-item" href="https://github.com/pankaj425/realtimeChatApp" target="_blank" rel="noopener noreferrer">
+              <span class="repo-top">
+                <span class="repo-name">realtimeChatApp</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#f1e05a"></span>JavaScript</span>
+              </span>
+              <span class="repo-desc">Full-stack real-time chat application built with the MERN stack and Socket.IO.</span>
+              <span class="repo-meta">Featured project</span>
+            </a>
+            <a class="repo-item" href="https://github.com/pankaj425/LocalAIAgentWithRAG" target="_blank" rel="noopener noreferrer">
+              <span class="repo-top">
+                <span class="repo-name">LocalAIAgentWithRAG</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </span>
+              <span class="repo-desc">A local retrieval-augmented question-answering agent for private documents.</span>
+              <span class="repo-meta">Featured project</span>
+            </a>
+          </div>
+
+          <div class="github-foot">
+            <span>Live data from the GitHub API; featured repositories are shown if it is unavailable.</span>
+            <a href="https://github.com/pankaj425?tab=repositories" target="_blank" rel="noopener noreferrer">
+              Browse all repositories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">08 &mdash; Contact</span>
+        <h2>Let's build something <span class="gradient-text">useful</span></h2>
+        <p class="section-sub">I'm open to internships, entry-level roles and collaborative projects.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-copy" data-reveal>
+          <h3>Have a role or project in mind?</h3>
+          <p>
+            The fastest way to reach me is email. Send a note with what you're working on, and
+            I'll get back to you as soon as I can.
+          </p>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:maddheshiyap181@gmail.com">
+              <span class="profile-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+              <span><b>Email</b><small>maddheshiyap181@gmail.com</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a class="contact-card" href="tel:+918176037328">
+              <span class="profile-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+              <span><b>Phone</b><small>+91 8176037328</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/pankaj-maddheshiya/" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+              <span><b>LinkedIn</b><small>pankaj-maddheshiya</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a class="contact-card" href="https://github.com/pankaj425" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+              <span><b>GitHub</b><small>@pankaj425</small></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <button type="button" class="text-btn" data-copy="maddheshiyap181@gmail.com">
+            <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy email address
+          </button>
+
+          <div class="availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            <div>
+              <b>Available for opportunities</b>
+              <p>Internships &middot; Entry-level roles &middot; Collaborations</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="mailto:maddheshiyap181@gmail.com" method="post" enctype="text/plain" novalidate data-reveal>
+          <div class="form-head">
+            <h3>Send a message</h3>
+            <p>All fields marked with an asterisk are required.</p>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship, project or collaboration" />
+          </div>
+
+          <div class="field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me a little about the opportunity..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Send Message
+          </button>
+
+          <p class="form-note">
+            This form opens your email app with the details filled in. You can also email me
+            directly at <a href="mailto:maddheshiyap181@gmail.com">maddheshiyap181@gmail.com</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a href="#home" class="brand" aria-label="Pankaj Maddheshiya, back to top">
+        <span class="brand-mark" aria-hidden="true">PM</span>
+        <span class="brand-text">Pankaj <span>Maddheshiya</span></span>
+      </a>
+      <p>Aspiring software developer focused on building practical, reliable applications.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Internships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-socials">
+      <a href="https://github.com/pankaj425" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pankaj-maddheshiya/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:maddheshiyap181@gmail.com" aria-label="Email">
+        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Pankaj Maddheshiya. All rights reserved.</p>
+    <p>Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
 </footer>
+
+<a href="#home" class="to-top" id="toTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pankaj Maddheshiya",
+  "jobTitle": "Aspiring Software Developer",
+  "email": "mailto:maddheshiyap181@gmail.com",
+  "url": "https://pankaj425.github.io/portfolio/",
+  "image": "https://pankaj425.github.io/portfolio/assets/profile.jpg",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Galgotias University"
+  },
+  "knowsAbout": ["Java", "Python", "JavaScript", "React", "SQL", "FastAPI"],
+  "sameAs": [
+    "https://github.com/pankaj425",
+    "https://www.linkedin.com/in/pankaj-maddheshiya/"
+  ]
+}
+</script>
 
 <script src="script.js"></script>
 </body>
-
 </html>
-
